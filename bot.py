@@ -19,7 +19,7 @@ async def send_message():
         for i in data_from_lxml_using_bs4():
             await bot.send_message('-1001649789391', i)
     else:
-        unique = list(set(data_from_lxml_using_bs) - set(data))
+        unique = list(set(data_from_lxml_using_bs4()) - set(data))
         print(f'unique: \n{unique}')
         print(f'data: \n{data}')
         if len(unique) > 0:
